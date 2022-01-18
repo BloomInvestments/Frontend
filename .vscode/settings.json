@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/**/lib": true,
+        "node_modules": true,
+        "dist": true
+    },
+    "editor.fontFamily": "Cascadia Code",
+    "files.autoSaveDelay": 500,
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

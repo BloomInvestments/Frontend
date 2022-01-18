@@ -1,0 +1,20 @@
+overwrite: true
+schema: "http://localhost:5000/graphql"
+documents: "data/**/*.graphql"
+generates:
+  data/graphql/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"
+      - "add":
+          content: '/* eslint-disable */'
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+
+
+      
